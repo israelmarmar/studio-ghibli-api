@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "luiz",
+    "password": "123",
+    "database": "challenge",
+    "host": "db",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "luiz",
+    "password": "123",
+    "database": "challenge",
+    "host": "db",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "luiz",
+    "password": "123",
+    "database": "challenge",
+    "host": "db",
+    "dialect": "mysql",
+    "dialectOptions": {
+      "charset": "utf8mb4"
+    }
+  }
+}

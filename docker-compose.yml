@@ -1,0 +1,23 @@
+version: '3.2'
+services:
+  node:
+    build: ./
+    entrypoint: dockerize -wait tcp://db:3306 -timeout 20s docker-entrypoint.sh
+    command: npm start
+    ports:
+      - "3333:3333"
+    depends_on:
+      - db
+    env_file:
+      - ./.env
+    volumes:
+      - ./:/app
+    tty: true
+    environment:
+      NODE_ENV: production
+  db:
+    build: ./db
+    ports:
+      - "3306:3306"
+    env_file:
+      - ./.env
